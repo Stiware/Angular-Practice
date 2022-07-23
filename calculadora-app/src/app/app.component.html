@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+</head>
+<body>
+  <div class="container" style="padding: 10px" >
+    <div>
+      <h1>{{titulo}}</h1>
+    </div>
+    <div>
+      <p>operando a</p>
+      <input type="number" placeholder="ingrese el valor de a" [(ngModel)]="a">
+      <p>operando b</p>
+      <input type="number" placeholder="ingrese el valor de b" [(ngModel)]="b" >
+      <br/>
+      <br/>
+      <button type="submit" class="btn btn-primary"
+       style="display:block ;" (click)="sumar()">SUMAR</button>
+      <p>Total: {{suma}}</p>
+    </div>
+  </div>
+</body>
+</html>
