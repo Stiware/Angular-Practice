@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonService } from '../services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonComponent implements OnInit {
 
-  constructor() { }
-
+  name:string = "";
+  urlImage: string = "";
+  constructor(private pokemonService : PokemonService) { }
   ngOnInit(): void {
+  }
+
+  search() {
+    this.pokemonService.getPokemon(this.name).subscribe((data:any) => {
+      this.urlImage = data.sprites.other.dream_world.front_default;
+    })
   }
 
 }
