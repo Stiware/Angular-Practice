@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { debounce } from 'rxjs';
 import { PokemonService } from '../services/pokemon.service';
 
 @Component({
@@ -19,5 +20,6 @@ export class PokemonComponent implements OnInit {
       this.urlImage = data.sprites.other.dream_world.front_default;
     })
   }
+
 
 }
